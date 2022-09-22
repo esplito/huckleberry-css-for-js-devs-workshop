@@ -9,6 +9,11 @@ body {
   padding: 0;
 }
 
+h1,
+h2 {
+  margin: 0;
+}
+
 /* Add styles here! */
 :root {
   --8px: 8px;
@@ -19,6 +24,26 @@ body {
   --64px: 64px;
   --96px: 96px;
   --128px: 128px;
+  --primary-green: hsl(160deg, 100%, 30%);
+  --secondary-lighter: hsl(45deg, 100%, 50%);
+  --secondary-darker: hsl(45deg, 100%, 40%);
+  --black: hsl(0deg, 0%, 0%);
+  --very-dark: hsl(0deg, 0%, 10%);
+  --dark: hsl(0deg, 0%, 30%);
+  --medium: hsl(0deg, 0%, 40%);
+  --light: hsl(0deg, 0%, 60%);
+  --white: hsl(0deg, 0%, 100%);
+}
+
+header {
+  padding-block-start: var(--64px);
+  border-block-end: 8px solid var(--medium);
+}
+
+main {
+  background-color: var(--light);
+  padding-block-start: var(--48px);
+  padding-block-end: var(--48px);
 }
 
 .max-width-wrapper {
@@ -27,6 +52,28 @@ body {
   max-width: 768px;
   padding: var(--16px);
 }
+section.max-width-wrapper {
+  background-color: var(--white);
+  border-block-end: 8px solid var(--medium);
+}
 .intro-chunk {
   max-width: 300px;
+}
+
+.intro-chunk strong {
+  color: var(--primary-green);
+}
+
+.intro-chunk > h1 {
+  padding-block-end: var(--24px);
+}
+
+.indented-heading {
+  background-color: var(--secondary-lighter);
+  border-block-end: 8px solid var(--secondary-darker);
+  padding: var(--16px);
+  padding-inline-start: var(--24px);
+  padding-inline-end: var(--24px);
+  margin-left: -24px;
+  width: fit-content;
 }
